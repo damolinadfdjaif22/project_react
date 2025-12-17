@@ -1,3 +1,5 @@
+import "../styles/Header.css";
+
 function Header({ theme, onToggleTheme }) {
   return (
     <header className="header">
