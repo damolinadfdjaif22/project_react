@@ -21,35 +21,3 @@ body {
   background-color: #121212;
   color: #ffffff;
 }
-
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-/* Botón de cambio de tema */
-.header button {
-  background-color: #8D44BB;
-  color: #ffffff;
-  border: none;
-  border-radius: 999px; /* Bordes ovalados */
-  padding: 0.6rem 1.2rem; /* Separación moderada del texto */
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Efecto hover */
-.header button:hover {
-  background-color: #7a3aa1;
-  transform: scale(1.03);
-}
-
-/* Accesibilidad: foco con teclado */
-.header button:focus {
-  outline: 2px solid #cfa7e8;
-  outline-offset: 2px;
-}
