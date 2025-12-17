@@ -1,0 +1,22 @@
+.app {
+  padding: 1rem;
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.hero,
+.stats,
+.features {
+  margin: 2rem 0;
+}
+
+.feature-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}

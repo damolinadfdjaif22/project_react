@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Composición",
+    "description": "Construye UI con componentes reutilizables."
+  },
+  {
+    "id": 2,
+    "title": "Estado",
+    "description": "Maneja UI reactiva con useState."
+  },
+  {
+    "id": 3,
+    "title": "Efectos",
+    "description": "Sincroniza efectos con useEffect."
+  }
+]
