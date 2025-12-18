@@ -21,3 +21,65 @@ body {
   background-color: #121212;
   color: #ffffff;
 }
+
+/* CSS PARA EL Hero.jsx */
+
+.hero-section {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #5a74ec 0%, #764ba2 100%); 
+  color: white;
+  min-height: 50vh; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-button {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: white;
+  color: #7545a5;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero-extra-info {
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

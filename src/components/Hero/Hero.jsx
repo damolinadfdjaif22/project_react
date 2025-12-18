@@ -1,25 +1,43 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import '../../index.css';
 
-function Hero() {
-  const [showMore, setShowMore] = useState(false);
+const Hero = () => {
+  const [mostrarDetalle, setMostrarDetalle] = useState(false);
+
+  const toggleDetalle = () => {
+    setMostrarDetalle(!mostrarDetalle);
+  };
 
   return (
-    <section className="hero">
-      <h2>Bienvenido a React</h2>
-      <p>Aplicación creada con Vite y React.</p>
 
-      {showMore && (
+    <section className="hero-section">
+      <div className="hero-content">
+        {/* Titular estático */}
+        <h1>Bienvenidos a React Learning</h1>
+        
+        {/* Subtítulo estático */}
+        <h2>Domina la creación de interfaces modernas</h2>
+        
         <p>
-          React permite construir interfaces de usuario reutilizables
-          mediante componentes.
+          Este es un proyecto demostrativo para la asignatura de Programación Integrativa.
+          Aprenderemos sobre componentes, props y hooks.
         </p>
-      )}
 
-      <button onClick={() => setShowMore(!showMore)}>
-        {showMore ? 'Mostrar menos' : 'Mostrar más'}
-      </button>
+        {/* Renderizado condicional basado en el estado */}
+        {mostrarDetalle && (
+          <p className="hero-extra-info">
+            React te permite construir interfaces de usuario a partir de piezas individuales llamadas componentes. 
+            ¡Es la librería más popular para el desarrollo web actual!
+          </p>
+        )}
+
+        {/* Botón interactivo */}
+        <button onClick={toggleDetalle} className="hero-button">
+          {mostrarDetalle ? 'Leer menos' : 'Leer más'}
+        </button>
+      </div>
     </section>
   );
-}
+};
 
 export default Hero;
