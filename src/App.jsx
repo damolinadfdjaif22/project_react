@@ -1,8 +1,8 @@
 // src/App.jsx
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header'; // Persona 2: colocar Header en esta ruta
-import Hero from './components/hero/Hero'; // Si renombraste la carpeta, ajusta la ruta; la ruta aquí coincide con tu repo actual
-import FeatureCard from './components/FeatureCard'; // Asegura FeatureCard en esta ruta
+import Header from './components/Header'; 
+import Hero from './components/hero/Hero'; 
+import FeatureCard from './components/FeatureCard'; 
 import Stats from './components/Stats/Stats';
 import Footer from './components/Footer/Footer';
 import './index.css';
