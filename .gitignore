@@ -1,0 +1,17 @@
+# Dependencias
+node_modules/
+
+# Build / cache
+dist/
+.vite/
+
+# Entornos
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+
+# Sistema
+.DS_Store

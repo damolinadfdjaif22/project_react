@@ -1,11 +1,11 @@
 // src/App.jsx
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header'; // Persona 2 debe crear este componente
-import Hero from './components/hero/Hero'; // según tu repo actual es lowercase; ajusta si renombraste
-import FeatureCard from './components/FeatureCard';
+import Header from './components/Header'; // Persona 2: colocar Header en esta ruta
+import Hero from './components/hero/Hero'; // Si renombraste la carpeta, ajusta la ruta; la ruta aquí coincide con tu repo actual
+import FeatureCard from './components/FeatureCard'; // Asegura FeatureCard en esta ruta
 import Stats from './components/Stats/Stats';
 import Footer from './components/Footer/Footer';
-import './index.css'; // usa el archivo que mostraste
+import './index.css';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -22,10 +22,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch {}
   }, [theme]);
 
-  // Cargar features.json usando import dinámico dentro de useEffect
+  // Cargar features.json
   useEffect(() => {
     let mounted = true;
     setLoading(true);
@@ -33,10 +35,9 @@ function App() {
 
     import('./data/features.json')
       .then((module) => {
-        // module puede exportar default o ser el array directo
         const data = module.default ?? module;
         if (mounted) {
-          setFeatures(data);
+          setFeatures(Array.isArray(data) ? data : []);
           setLoading(false);
         }
       })
@@ -55,13 +56,12 @@ function App() {
 
   return (
     <div className={`app ${theme}`}>
-      {/* Header puede usar theme y onToggleTheme */}
       <Header theme={theme} onToggleTheme={toggleTheme} />
 
       <main>
         <Hero />
 
-        <section className="features" aria-live="polite">
+        <section className="features" aria-live="polite" aria-busy={loading}>
           <h2 className="sr-only">Características</h2>
 
           {loading && <p>Cargando características...</p>}
