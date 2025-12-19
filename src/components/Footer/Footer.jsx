@@ -11,7 +11,7 @@ function Footer() {
 
         <nav className="footer-nav" aria-label="Enlaces del proyecto">
           <a
-            href="https://github.com"
+            href="https://github.com/damolinadfdjaif22/project_react.git"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Ir al repositorio en GitHub (se abre en una nueva pestaña)"
@@ -36,3 +36,4 @@ function Footer() {
 }
 
 export default Footer;
+
